@@ -34,6 +34,7 @@ Encerrando o gerador. Até mais!
 
 📁 Arquivo de saída
 As senhas geradas são salvas em um arquivo chamado senhas_geradas.txt, no mesmo diretório onde o script é executado.
+
 🚀 Objetivo
 Esse projeto foi criado como prática de programação em Python, com foco em segurança da informação e automação de tarefas simples.
 
@@ -47,6 +48,7 @@ pip install pyinstaller
 Use o comando cd para navegar até a pasta onde está o seu script:
 
 cd "C:\Users\SeuNome\Documents\meu-projeto"
+
 Substitua o caminho pelo local onde está seu arquivo .py.
 
 ⚙️ Gere o executável
@@ -57,6 +59,7 @@ pyinstaller --onefile --console nome_do_arquivo.py
 --console: mantém a janela do console aberta (necessário para entrada de dados via input())
 
 Exemplo real:
+
 pyinstaller --onefile --console gerador_senha.py
 
 4. 📂 Onde está o .exe?
