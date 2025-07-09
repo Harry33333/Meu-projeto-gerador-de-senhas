@@ -31,6 +31,7 @@ Senha salva em 'senhas_geradas.txt'
 Deseja gerar outra senha? (s/n): n
 
 Encerrando o gerador. Até mais!
+
 📁 Arquivo de saída
 As senhas geradas são salvas em um arquivo chamado senhas_geradas.txt, no mesmo diretório onde o script é executado.
 🚀 Objetivo
