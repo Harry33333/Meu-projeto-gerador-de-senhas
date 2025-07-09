@@ -19,6 +19,7 @@ Digite o tamanho da senha (entre 8 e 64).
 A senha gerada será exibida na tela e salva no arquivo senhas_geradas.txt.
 
 💻 Interface do script:
+
 === Gerador de Senhas Fortes ===
 
 Informe o tamanho da senha (8 a 64): 16
