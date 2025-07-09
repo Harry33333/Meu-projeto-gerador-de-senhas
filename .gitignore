@@ -1,18 +1,41 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+CÓDIGO DO SCRIPT:
 
-# Other files and folders
-.settings/
+importar aleatório
+string de importação
+importar sistema operacional
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+def gerar_senha(tamanho):
+    if tamanho < 8 ou tamanho > 64: #Aqui é o tamanho mínimo e o tamanho máximo da senha
+        raise ValueError("O tamanho da senha deve estar entre 8 e 64 caracteres.")
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+    caracteres = string.ascii_letters + string.digits + string.punctuation
+    senha = ''.join(random.choice(caracteres) for _ in range(tamanho))
+    retornar senha
+
+def salvar_senha(senha, arquivo="senhas_geradas.txt"):#Aqui é a pasta e o nome da pasta que vai criar e salvar suas senhas
+    com open(arquivo, "a") como f:
+        f.write(senha + "\n")
+
+def menu():
+    print("=== Gerador de Senhas Fortes ===\n")
+    
+    enquanto Verdadeiro:
+        tentar:
+            tamanho = int(input("Informe o tamanho da senha (8 a 64): "))#Aqui é a pergunta do tamanho da senha
+            se 8 <= tamanho <= 64:
+                senha = gerar_senha(tamanho)
+                print(f"\nSenha gerada: {senha}\n")
+                salvar_senha(senha)
+                print("Senha salva em 'senhas_geradas.txt'\n")
+            outro:
+                print("❌ Tamanho inválido! Digite um número entre 8 e 64.\n")#Aqui é uma mensagem de erro se o número não estiver entre 8 a 64
+                continuar
+
+            outra = input("Deseja gerar outra senha? (s/n): ").lower()#Aqui é a pergunta para encerramento ou continuação
+            se outra != 's':
+                print("\nEncerrando o gerador. Até mais!")
+                quebrar
+        exceto ValueError:
+            print("❌ Entrada inválida! Digite apenas números.\n")#Aqui é a mensagem de erro se selecionar resposta diferente de "s" ou "n"
+
+se__nome__== "__principal__":
