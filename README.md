@@ -8,7 +8,7 @@ Usa letras maiúsculas, minúsculas, números e símbolos
 Salva automaticamente cada senha em senhas_geradas.txt
 
 Interface simples em modo texto
-omo usar
+Como usar
 Certifique-se de ter o Python 3 instalado na sua máquina.
 
 Execute o script:
